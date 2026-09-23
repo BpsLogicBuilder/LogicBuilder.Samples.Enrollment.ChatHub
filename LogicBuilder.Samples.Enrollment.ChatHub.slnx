@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path="global.json" />
+    <File Path="README.md" />
   </Folder>
   <Folder Name="/src/">
     <Project Path="docker-compose.dcproj">
@@ -11,5 +12,6 @@
   </Folder>
   <Folder Name="/test/">
     <Project Path="Enrollment.ChatHub.Flow.Test/Enrollment.ChatHub.Flow.Test.csproj" />
+    <Project Path="LogicBuilder.Samples.Enrollment.ChatHub.Test/LogicBuilder.Samples.Enrollment.ChatHub.Test.csproj" />
   </Folder>
 </Solution>
