@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="global.json" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="docker-compose.dcproj">
+      <Build />
+    </Project>
+    <Project Path="Enrollment.ChatHub.Flow/Enrollment.ChatHub.Flow.csproj" />
+    <Project Path="LogicBuilder.Samples.Enrollment.ChatHub/LogicBuilder.Samples.Enrollment.ChatHub.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="Enrollment.ChatHub.Flow.Test/Enrollment.ChatHub.Flow.Test.csproj" />
+  </Folder>
+</Solution>
