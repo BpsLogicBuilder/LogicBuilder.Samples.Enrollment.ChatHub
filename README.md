@@ -1,5 +1,10 @@
 # LogicBuilder.Samples.Enrollment.ChatHub
 
+[![CI](https://github.com/BpsLogicBuilder/LogicBuilder.Samples.Enrollment.ChatHub/actions/workflows/ci.yml/badge.svg)](https://github.com/BpsLogicBuilder/LogicBuilder.Samples.Enrollment.ChatHub/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/BpsLogicBuilder/LogicBuilder.Samples.Enrollment.ChatHub/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/BpsLogicBuilder/LogicBuilder.Samples.Enrollment.ChatHub/actions/workflows/github-code-scanning/codeql)
+[![codecov](https://codecov.io/gh/BpsLogicBuilder/LogicBuilder.Samples.Enrollment.ChatHub/graph/badge.svg?token=L4011F6T4X)](https://codecov.io/gh/BpsLogicBuilder/LogicBuilder.Samples.Enrollment.ChatHub)
+[![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=BpsLogicBuilder_LogicBuilder.Samples.Enrollment.ChatHub&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BpsLogicBuilder_LogicBuilder.Samples.Enrollment.ChatHub)
+
 A sample ASP.NET Core SignalR application demonstrating how to expose a chat endpoint that dynamically selects and runs AI agents driven by a **Logic Builder** rules-engine workflow.
 
 ## What this repository does
@@ -12,9 +17,9 @@ Chat clients connect to the `AgentAIChatHub` SignalR hub (mapped at `/agentChatH
 
 ## Key projects
 
-- **LogicBuilder.Samples.Enrollment.ChatHub** – The ASP.NET Core host. Configures SignalR, dependency injection, and exposes `AgentAIChatHub` as the client-facing endpoint.
+- **Enrollment.ChatHub** – The ASP.NET Core host. Configures SignalR, dependency injection, and exposes `AgentAIChatHub` as the client-facing endpoint.
 - **Enrollment.ChatHub.Flow** – The Logic Builder flow/ruleset project (`Rulesets/*.module`) responsible for the business logic that selects and builds the appropriate `AIAgent` for a given agent identifier, and for terminating/completing flows.
-- **LogicBuilder.Samples.Enrollment.ChatHub.Test / Enrollment.ChatHub.Flow.Test** – Unit tests covering the hub, agent initializer, and flow behavior.
+- **Enrollment.ChatHub.Test / Enrollment.ChatHub.Flow.Test** – Unit tests covering the hub, agent initializer, and flow behavior.
 
 ## Why Logic Builder?
 

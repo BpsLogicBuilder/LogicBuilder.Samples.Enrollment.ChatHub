@@ -5,7 +5,7 @@ using Microsoft.Agents.AI;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 
-namespace LogicBuilder.Samples.Enrollment.ChatHub.Test
+namespace Enrollment.ChatHub.Test
 {
     public class AgentInitializerTest
     {

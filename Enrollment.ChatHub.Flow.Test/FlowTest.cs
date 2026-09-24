@@ -90,6 +90,7 @@ namespace Enrollment.ChatHub.Flow.Test
             ErrorResponse response = (ErrorResponse)flowManager.FlowDataCache.Response!;
 
             //assert
+            Assert.Equal("Agent succeeded is False.", flowManager.FlowDataCache.Items["VariableToTestStringFormat"]);
             Assert.False(response.Success);
         }
 

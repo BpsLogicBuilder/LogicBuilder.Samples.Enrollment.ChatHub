@@ -1,6 +1,6 @@
 ﻿using Microsoft.Agents.AI;
 
-namespace LogicBuilder.Samples.Enrollment.ChatHub
+namespace Enrollment.ChatHub
 {
     public interface IAgentInitializer
     {

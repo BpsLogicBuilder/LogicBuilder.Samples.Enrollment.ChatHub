@@ -1,6 +1,6 @@
 using AutoMapper;
 using LogicBuilder.App.AI.Utils.Mapping;
-using LogicBuilder.Samples.Enrollment.ChatHub;
+using Enrollment.ChatHub;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -61,5 +61,11 @@ app.UseCors();
 app.MapHub<AgentAIChatHub>("/agentChatHub");
 
 await app.RunAsync();
+
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class Program
+{
+    protected Program() { }
+}
 
 

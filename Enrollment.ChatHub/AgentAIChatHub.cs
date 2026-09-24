@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Threading.Tasks;
 
-namespace LogicBuilder.Samples.Enrollment.ChatHub
+namespace Enrollment.ChatHub
 {
     public class AgentAIChatHub(IAgentHandler agentHandler, IAgentInitializer agentInitializer) : Hub
     {
