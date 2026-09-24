@@ -1,3 +1,4 @@
+* 2026-09-24 - AB#230: Fixing SonarCloud Issus.
 * 2026-09-24 - AB#230: Use coverage exclusions.
 * 2026-09-23 - AB#230: Skipping Sonar code coverage
 * 2026-09-23 - AB#230: Add CI workflow
