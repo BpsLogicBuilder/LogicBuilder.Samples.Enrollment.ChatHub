@@ -4,7 +4,7 @@ using Microsoft.Agents.AI;
 using Microsoft.AspNetCore.SignalR;
 using Moq;
 
-namespace LogicBuilder.Samples.Enrollment.ChatHub.Test
+namespace Enrollment.ChatHub.Test
 {
     public class AgentAIChatHubTest
     {

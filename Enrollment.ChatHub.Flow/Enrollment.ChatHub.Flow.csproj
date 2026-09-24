@@ -7,13 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Rulesets\callterminateflow.module" />
+    <None Remove="Rulesets\callterminateflow.resources" />
     <None Remove="Rulesets\initial.module" />
     <None Remove="Rulesets\initial.resources" />
+    <None Remove="Rulesets\returnwithnullresponse.module" />
+    <None Remove="Rulesets\returnwithnullresponse.resources" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Rulesets\callterminateflow.module" />
+    <EmbeddedResource Include="Rulesets\callterminateflow.resources" />
     <EmbeddedResource Include="Rulesets\initial.module" />
     <EmbeddedResource Include="Rulesets\initial.resources" />
+    <EmbeddedResource Include="Rulesets\returnwithnullresponse.module" />
+    <EmbeddedResource Include="Rulesets\returnwithnullresponse.resources" />
   </ItemGroup>
 
   <ItemGroup>

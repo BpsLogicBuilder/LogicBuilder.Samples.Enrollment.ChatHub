@@ -4,7 +4,7 @@ using Microsoft.Agents.AI;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace LogicBuilder.Samples.Enrollment.ChatHub
+namespace Enrollment.ChatHub
 {
     public class AgentInitializer(IServiceScopeFactory scopeFactory) : IAgentInitializer
     {

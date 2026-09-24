@@ -1,6 +1,6 @@
 services:
-  logicbuilder.samples.enrollment.chathub:
-    image: ${DOCKER_REGISTRY-}logicbuildersamplesenrollmentchathub
+  enrollment.chathub:
+    image: ${DOCKER_REGISTRY-}enrollmentchathub
     build:
       context: .
-      dockerfile: LogicBuilder.Samples.Enrollment.ChatHub/Dockerfile
+      dockerfile: Enrollment.ChatHub/Dockerfile

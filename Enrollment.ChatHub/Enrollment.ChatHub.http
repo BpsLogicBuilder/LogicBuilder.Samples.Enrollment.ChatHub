@@ -1,0 +1,6 @@
+@Enrollment.ChatHub_HostAddress = http://localhost:5109
+
+GET {{LEnrollment.ChatHub_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
