@@ -1,7 +1,8 @@
 using AutoMapper;
-using LogicBuilder.App.AI.Utils.Mapping;
 using Enrollment.ChatHub;
+using LogicBuilder.App.AI.Utils.Mapping;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging.Abstractions;
 using System;
@@ -11,10 +12,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+const string SecureCorsPolicy = "SecureCorsPolicy";
+
+var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
+
 builder.Services.AddSignalR();
-builder.Services.AddCors(options => {
-    options.AddDefaultPolicy(policy => {
-        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4205").AllowCredentials();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(SecureCorsPolicy, policy =>
+    {
+        if (allowedOrigins != null && allowedOrigins.Length > 0)
+        {
+            policy.WithOrigins(allowedOrigins)
+                  .WithMethods("GET", "POST", "PUT", "DELETE")
+                  .WithHeaders("Content-Type", "Authorization", "x-requested-with", "x-signalr-user-agent")
+                  .AllowCredentials();
+        }
     });
 });
 builder.Services
@@ -55,7 +68,7 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 });
 
-app.UseCors();
+app.UseCors(SecureCorsPolicy);
 
 // Map your WebSocket endpoints transparently
 app.MapHub<AgentAIChatHub>("/agentChatHub");

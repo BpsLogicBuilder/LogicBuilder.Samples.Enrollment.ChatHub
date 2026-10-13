@@ -1,0 +1,7 @@
+$rg = "<rg>"
+$acrName="<acr>"
+$imageTag="v1.0.0"
+
+az acr build --registry $acrName --image "enrollmentchathub:${imageTag}" --image enrollmentchathub:latest --file ./Enrollment.ChatHub/Dockerfile .
+
+az deployment group create --resource-group $rg --template-file infrastructure/enrollmentchathub.bicep --parameters imageTag="$imageTag" foundryProjectEndpoint="<endpoint>"
