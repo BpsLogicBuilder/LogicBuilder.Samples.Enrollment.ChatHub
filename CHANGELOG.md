@@ -1,3 +1,4 @@
+* 2026-10-15 - AB#243: Add AKS CD workflow.
 * 2026-10-13 - AB#242: Add CD workflow.
 * 2026-09-24 - AB#230: Fixing SonarCloud Issus.
 * 2026-09-24 - AB#230: Use coverage exclusions.
