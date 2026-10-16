@@ -1,3 +1,4 @@
+* 2026-10-16 - AB#248: Rename cd-aks.yaml to cd-aks.yml.
 * 2026-10-15 - AB#243: Add AKS CD workflow.
 * 2026-10-13 - AB#242: Add CD workflow.
 * 2026-09-24 - AB#230: Fixing SonarCloud Issus.
